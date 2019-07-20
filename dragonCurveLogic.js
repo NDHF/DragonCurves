@@ -118,16 +118,16 @@ function dragonCurveWhileLoop() {
     } else {
         console.error("Did not select a number");
     }
-    getById("printout").value = JSON.stringify(directionArray);
-    // originalX = 0;
-    // originalY = 0;
+    // getById("printout").value = JSON.stringify(directionArray);
+    originalX = 0;
+    originalY = 0;
 
-    // x = 0;
-    // y = 0;
-    // lineLength = 0;
-    // currentIteration = 1;
-    // maxIterations = 0;
-    // directionArray = [2];
+    x = 0;
+    y = 0;
+    lineLength = 0;
+    currentIteration = 1;
+    maxIterations = 0;
+    directionArray = [2];
 }
 
 whenClicked("runDragonCurve", dragonCurveWhileLoop);
