@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dragon Curve</title>
+
+    <style>
+    
+    canvas {
+        display: block;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+        border: 1px solid black;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    div#informationDiv {
+        text-align: center;
+        visibility: hidden;
+    }
+
+    option {
+        text-align: right;
+    }
+
+    </style>
+</head>
+<body>
+
+    <h1>DRAGON CURVE</h1>
+
+    <!-- <canvas id="dragonCurveCanvas" width="1000" height="1000"></canvas> -->
+    <canvas id="dragonCurveCanvas" width="1390" height="620"></canvas>
+    <!-- <canvas id="dragonCurveCanvas" width="13900" height="6200"></canvas> -->
+
+    <div id="informationDiv">
+        <h3><span id="whichIteration"></span> ITERATION</h3>
+        <h4>There are 2<sup id="iterationExponent"></sup> lines in this image, including overlapping lines (that's <span id="asInteger"></span>)</span></h4>
+    </div>
+
+
+    <select id="iterationSelect">
+        <option value="choose">CHOOSE NUMBER OF ITERATIONS</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17 (This could take a while)</option>
+        <option value="18">18 (This will take bit longer)</option>
+    </select>
+
+    <br>
+    <br>
+
+    <button id="runDragonCurve">RUN DRAGON CURVE</button>
+
+    <div id="explanation">
+        <h2>So What Is This, Anyway?</h2>
+
+        <p>Dragon Curves is a shape made using some very simple rules:</p>
+
+        <ol>
+            <li></li>
+        </ol>
+    </div>
+
+    <textarea id="printout"></textarea>
+
+    <!-- <script src="dragonCurveLogic.js"></script> -->
+    <script src="dragonCurveArt.js"></script>
+    
+</body>
+</html>
