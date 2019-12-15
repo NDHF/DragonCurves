@@ -19,10 +19,8 @@ let iterationValueTable = [
     {x: 300, y: 350, lineLength: 50, spoken: "SEVENTH"},
     {x: 400, y: 250, lineLength: 40, spoken: "EIGHTH"},
     {x: 600, y: 250, lineLength: 25, spoken: "NINTH"},
-    // {x: 750, y: 350, lineLength: 19, spoken: "TENTH"},
-    {x: 480, y: 140, lineLength: 10, spoken: "TENTH"},
-    // {x: 1050, y: 600, lineLength: 13, spoken: "ELEVENTH"},
-    {x: 400, y: 200, lineLength: 10, spoken: "ELEVENTH"},
+    {x: 750, y: 350, lineLength: 19, spoken: "TENTH"},
+    {x: 650, y: 600, lineLength: 13, spoken: "ELEVENTH"},
     {x: 600, y: 700, lineLength: 9, spoken: "TWELFTH"},
     {x: 350, y: 700, lineLength: 7, spoken: "THIRTEENTH"},
     {x: 235, y: 600, lineLength: 5, spoken: "FOURTHEENTH"},
@@ -118,7 +116,7 @@ function dragonCurveWhileLoop() {
     } else {
         console.error("Did not select a number");
     }
-    // getById("printout").value = JSON.stringify(directionArray);
+    getById("printout").value = JSON.stringify(directionArray);
     originalX = 0;
     originalY = 0;
 
