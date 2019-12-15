@@ -116,7 +116,7 @@ function dragonCurveWhileLoop() {
     } else {
         console.error("Did not select a number");
     }
-    getById("printout").value = JSON.stringify(directionArray);
+    // getById("printout").value = JSON.stringify(directionArray);
     originalX = 0;
     originalY = 0;
 
