@@ -10,7 +10,6 @@
     <style>
         div#container {
             display: flex;
-            flex-wrap: nowrap;
         }
 
         div#emptyDiv {
@@ -50,7 +49,7 @@
             display: flex;
             width: 100%;
             flex-direction: row;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
         }
@@ -123,6 +122,11 @@
                 width: 20%;
             }
 
+            img.coffeeTable {
+                width: 33%;
+                margin-bottom: 10px;
+            }
+
             figure img {
                 width: 40%;
                 height: auto;
@@ -150,6 +154,14 @@
                 display: block;
                 width: 100%;
             }
+
+            img#jurassicParkPhoto, img.coffeeTable {
+                display: block;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
         }
 
         /* MOBILE, LANDSCAPE */
@@ -172,6 +184,15 @@
 
             div#optionsDiv {
                 width: 35%;
+            }
+
+            
+            img#jurassicParkPhoto, img.coffeeTable {
+                display: block;
+                width: 66%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -285,7 +306,7 @@
         </p>
         <div class="illustrationDiv">
             <figure>
-                <img src="illustrations/illustration-10.jpg" />
+                <img id="jurassicParkPhoto" src="illustrations/illustration-10.jpg" />
                 <figcaption><strong><i>Jurassic Park</i></strong>,
                     <br />
                     2015 paperback, p. 199.</figcaption>
@@ -315,6 +336,14 @@
 
         <p>I then used <strong>Legos&trade;</strong> to <strong>tile my coffee table</strong> with a 
         <strong>Dragon Curve pattern.</strong></p>
+
+        <div class="illustrationDiv">
+            <img class="coffeeTable" src="illustrations/illustration-11.jpg" />
+            <img class="coffeeTable" src="illustrations/illustration-12.jpg" />
+            <img class="coffeeTable" src="illustrations/illustration-13.jpg" />
+            <img class="coffeeTable" src="illustrations/illustration-14.jpg" />
+            <img class="coffeeTable" src="illustrations/illustration-15.jpg" />
+        </div>
 
         <p>Using a modified version of my program, a <strong>Dragon Curve</strong> tile can be made for any size surface.</p>
 
