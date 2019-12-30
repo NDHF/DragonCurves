@@ -46,12 +46,51 @@
             text-align: right;
         }
 
+        div.illustrationDiv {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        figure {
+            width: 100%;
+        }
+
+        figure img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        figcaption {
+            text-align: center;
+        }
+
+        /* img.illustration {
+            border: 1px solid black;
+        } */
+
         select#iterationSelect,
-            button#runDragonCurve {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
+        button#runDragonCurve {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div#explanation h2 {
+            text-align: center;
+        }
+
+        div#explanation {
+            font-size: 125%;
+        }
+
+        p:last-child {
+            margin-bottom: 10%;
+        }
 
         /* DESKTOP */
 
@@ -71,6 +110,23 @@
             div#optionsDiv {
                 width: 25%;
             }
+
+            div#explanation {
+                display: block;
+                width: 66%;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            img.illustration {
+                width: 20%;
+            }
+
+            figure img {
+                width: 40%;
+                height: auto;
+            }
         }
 
         /* MOBILE, PORTRAIT */
@@ -79,13 +135,20 @@
             div#container {
                 flex-direction: column;
             }
+
             div#emptyDiv {
                 height: 0px;
                 width: 0px;
                 visibility: collapse;
             }
+
             select#iterationSelect {
                 margin-top: 25px;
+            }
+
+            div#explanation {
+                display: block;
+                width: 100%;
             }
         }
 
@@ -96,14 +159,17 @@
                 flex-direction: row;
                 justify-content: space-around;
             }
+
             div#emptyDiv {
                 height: 0px;
                 width: 0px;
                 visibility: collapse;
             }
+
             div#drawingDiv {
                 width: 30%;
             }
+
             div#optionsDiv {
                 width: 35%;
             }
@@ -161,11 +227,79 @@
     <div id="explanation">
         <h2>So What Is This, Anyway?</h2>
 
-        <p>Dragon Curves is a shape made using some very simple rules:</p>
+        <p>The <strong>Dragon Curve</strong> is a simple <strong>fractal</strong> shape.</p>
+
+        <p><strong>Fractals</strong> are characterized by being <strong>symmetrical across scale</strong>, meaning their
+            shapes repeat at different sizes.</p>
+
+        <p>Many objects in nature have <strong>fractal</strong> characteristics: <strong>trees, blood vessels, and
+                mountains</strong>, for example.</p>
+
+        <p>The <strong>Dragon Curve</strong> fractal is made using a <strong>very simple set of rules:</strong></p>
 
         <ol>
-            <li></li>
+            <li>Start with a line going down.
+                <div class="illustrationDiv">
+                    <img class="illustration" src="illustrations/illustration-01.svg" />
+                </div>
+            </li>
+            <li><strong>From the end point,</strong> rotate the shape 90&deg; counter-clockwise.
+                <div class="illustrationDiv">
+                    <img class="illustration" src="illustrations/illustration-02.svg" />
+                    <img class="illustration" src="illustrations/illustration-03.svg" />
+                </div>
+            </li>
+            <li><strong>Repeat the process,</strong> starting from the new end point, and rotating 90&deg;
+                counter-clockwise.
+                <div class="illustrationDiv">
+                    <img class="illustration" src="illustrations/illustration-04.svg" />
+                    <img class="illustration" src="illustrations/illustration-05.svg" />
+                </div>
+            </li>
+            <li><strong>With successive iterations, patterns begin to emerge.</strong>
+                <div class="illustrationDiv">
+                    <img class="illustration" width="200" height="200" src="illustrations/illustration-06.gif" />
+                </div>
+            </li>
+            <li>The pattern grows <strong>exponentially</strong>, doubling in size with each iteration.
+                <div class="illustrationDiv">
+                    <img class="illustration" width="200" height="200" src="illustrations/illustration-07.gif" />
+                    <img class="illustration" width="200" height="200" src="illustrations/illustration-08.gif" />
+                </div>
+            </li>
+            <li>The first iteration had just <strong>two lines</strong>, but the eighteenth iteration has over a
+                <strong>quarter-million lines</strong>.
+                <br />
+                Seen from a distance, <strong>individual lines</strong> blend together into a <strong>solid
+                    color</strong>.
+                <div class="illustrationDiv">
+                    <img class="illustration" width="200" height="200" src="illustrations/illustration-09.gif" />
+                </div>
+            </li>
+
         </ol>
+
+        <p><strong>Dragon Curves</strong> were famously used in Michael Crichton's novel
+            <strong><i>Jurassic Park</i></strong>, where mathematician <strong>Dr. Ian Malcolm</strong>
+            uses them to illustrate the <strong>chaos</strong> inherent in the park's design.
+        </p>
+        <div class="illustrationDiv">
+            <figure>
+                <img src="illustrations/illustration-10.jpg" />
+                <figcaption><strong><i>Jurassic Park</i></strong>,
+                    <br />
+                    2015 paperback, p. 199.</figcaption>
+            </figure>
+        </div>
+        <p>
+            A <strong>Dragon Curve</strong> uses very simple rules, but from those simple rules,
+            <strong>elaborate, unforseen patterns emerge</strong>.
+        </p>
+        <p>
+            In the same way, the rules governing
+            <strong>Jurassic Park</strong> and its <strong>dinosaurs</strong> seem simple and foolproof to the park's designers,
+            but lead to <strong>unpredictable, catastrophic</strong> results.
+        </p>
     </div>
 
     <!-- <textarea id="printout"></textarea> -->
