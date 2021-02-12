@@ -14,13 +14,13 @@ let iterationValueTable = [
     {x: 700, y: 300, lineLength: 200, spoken: "SECOND"},
     {x: 700, y: 600, lineLength: 200, spoken: "THIRD"},
     {x: 600, y: 600, lineLength: 100, spoken: "FOURTH"},
-    {x: 350, y: 650, lineLength: 100, spoken: "FIFTH"},
-    {x: 250, y: 550, lineLength: 75, spoken: "SIXTH"},
-    {x: 300, y: 350, lineLength: 50, spoken: "SEVENTH"},
-    {x: 400, y: 250, lineLength: 40, spoken: "EIGHTH"},
+    {x: 350, y: 650, lineLength: 100, spoken: "FIFTH", gap: 45},
+    {x: 250, y: 550, lineLength: 75, spoken: "SIXTH", gap: 50},
+    {x: 300, y: 350, lineLength: 50, spoken: "SEVENTH", gap: 50},
+    {x: 400, y: 250, lineLength: 40, spoken: "EIGHTH", gap: 10},
     {x: 600, y: 250, lineLength: 25, spoken: "NINTH"},
     {x: 750, y: 350, lineLength: 19, spoken: "TENTH"},
-    {x: 650, y: 600, lineLength: 13, spoken: "ELEVENTH"},
+    {x: 650, y: 600, lineLength: 13, spoken: "ELEVENTH", gap: 11},
     {x: 600, y: 700, lineLength: 9, spoken: "TWELFTH"},
     {x: 350, y: 700, lineLength: 7, spoken: "THIRTEENTH"},
     {x: 235, y: 600, lineLength: 5, spoken: "FOURTHEENTH"},
@@ -51,6 +51,7 @@ function whenClicked(id, functionToRun) {
 let dragonCurveCanvas = getById("dragonCurveCanvas");
 let ctx = dragonCurveCanvas.getContext("2d");
 ctx.strokeStyle = "red";
+ctx.fillStyle = "red";
 
 function runDragonCurve() {
 
@@ -84,6 +85,26 @@ function runDragonCurve() {
         ctx.lineTo(x, y);
         // ctx.rect(x, y, lineLength, lineLength);
         ctx.stroke();
+
+        // function renderSquares() {
+        //     let squareXPos = 0;
+        //     let squareYPos = 0;
+        //     if (item === 0) {
+        //         squareXPos = x;
+        //         squareYPos = y;
+        //     } else if (item === 1) {
+        //         squareXPos = (x - lineLength);
+        //         squareYPos = y;
+        //     } else if (item === 2) {
+        //         squareXPos = (x - lineLength);
+        //         squareYPos = (y - lineLength);
+        //     } else if (item === 3) {
+        //         squareXPos = x;
+        //         squareYPos = (y - lineLength);
+        //     }
+        //     ctx.fillRect(squareXPos, squareYPos, lineLength, lineLength);
+        // }
+        // renderSquares();
     }
 
     directionArray.forEach(drawDragonCurve);
